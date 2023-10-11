@@ -50,7 +50,8 @@ vendor                                                  /vendor                e
 # with wrappedkey
 /dev/block/bootdevice/by-name/metadata                  /metadata              ext4    noatime,nosuid,nodev,discard                         wait,formattable,wrappedkey,first_stage_mount
 /dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,nodiscard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt    latemount,wait,check,formattable,fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
-
+/dev/block/bootdevice/by-name/esp                       /esp                   vfat    rw                                                   latemount,wait 
+/dev/block/bootdevice/by-name/win                       /win                   ntfs    defaults,umask                                       latemount,wait
 #
 /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
 #

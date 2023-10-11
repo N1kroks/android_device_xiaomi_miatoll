@@ -57,6 +57,9 @@ vendor                                                  /vendor                e
 /dev/block/by-name/metadata                             /metadata             ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
 /dev/block/bootdevice/by-name/userdata                  /data                 f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt    latemount,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,metadata_encryption=aes-256-xts,keydirectory=/metadata/vold/metadata_encryption,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
 
+/dev/block/bootdevice/by-name/esp                       /esp                   vfat    rw                                                   latemount,wait 
+/dev/block/bootdevice/by-name/win                       /win                   ntfs    defaults,umask                                       latemount,wait
+
 # misc
 /dev/block/bootdevice/by-name/misc                      /misc                 emmc    defaults                                             defaults
 #
